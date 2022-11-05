@@ -2,14 +2,14 @@ use dep::std;
 
 fn main(
     governor: Field,
-    block_hash: Field,
+    _block_hash: Field,
     proposal_id: Field,
     // todo: no variable length arrays, or arrays of structs
     votes: [u64; 2],
     _signatures: [u8; 1],
     _accountProofs: [u8; 1],
     _storageProofs: [u8; 1]
-) -> pub [Field; 3] {
+) -> pub [Field; 2] {
     let mut lastId: u64 = 0;
 
     for i in 0..2 {
@@ -20,5 +20,5 @@ fn main(
         lastId = votes[i];
     };
 
-    [governor, block_hash, proposal_id]
+    [governor, proposal_id]
 }
