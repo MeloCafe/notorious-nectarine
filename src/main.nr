@@ -4,11 +4,11 @@ fn main(
     governor: Field,
     block_hash: Field,
     proposal_id: Field,
-    // todo: no variable length arrays
+    // todo: no variable length arrays, or arrays of structs
     votes: [u64; 2],
-    _signatures: [u8; 0],
-    _accountProofs: [u8; 0],
-    _storageProofs: [u8; 0]
+    _signatures: [u8; 1],
+    _accountProofs: [u8; 1],
+    _storageProofs: [u8; 1]
 ) -> pub [Field; 3] {
     let mut lastId: u64 = 0;
 
