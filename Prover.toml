@@ -1,11 +1,7 @@
 governor = "0x8ad599c3A0ff1De082011EFDDc58f1908eb6e6D8"
-_block_hash = "0x3c0c71304d9bd19e500bc9ebf1916090d6762885d511360e53673c8f7178d0b8"
-proposal_id = "0xe07c53ddae29247e7c3623aea0aa3c8cf3d9ead8390d031755bc59a33bd64011"
+proposal_id = "0x55bc59a33bd64011"
 votes = [1, 2]
-_signatures = [0]
-_accountProofs = [0]
-_storageProofs = [0]
 return = [
     "0x8ad599c3A0ff1De082011EFDDc58f1908eb6e6D8",
-    "0xe07c53ddae29247e7c3623aea0aa3c8cf3d9ead8390d031755bc59a33bd64011"
+    "0x55bc59a33bd64011"
 ]

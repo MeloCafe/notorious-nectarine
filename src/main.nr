@@ -2,13 +2,13 @@ use dep::std;
 
 fn main(
     governor: Field,
-    _block_hash: Field,
     proposal_id: Field,
-    // todo: no variable length arrays, or arrays of structs
+    // todo: no variable length arrays, so we're stuck passing fixed length votes arrays
     votes: [u64; 2],
-    _signatures: [u8; 1],
-    _accountProofs: [u8; 1],
-    _storageProofs: [u8; 1]
+    // todo: actual signatures
+    // _signatures: [u8; 1],
+    // _accountProofs: [u8; 1],
+    // _storageProofs: [u8; 1],
 ) -> pub [Field; 2] {
     let mut lastId: u64 = 0;
 
