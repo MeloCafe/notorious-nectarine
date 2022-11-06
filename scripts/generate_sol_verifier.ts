@@ -1,5 +1,5 @@
 import { resolve, join } from 'path';
-import { compile } from '@noir-lang/noir_wasm';
+import { compile, acir_to_bytes } from '@noir-lang/noir_wasm';
 import { setup_generic_prover_and_verifier } from '@noir-lang/barretenberg/dest/client_proofs';
 import { writeFileSync } from 'fs';
 
@@ -11,6 +11,7 @@ async function generate_sol_verifier() {
 
   const sc = verifier.SmartContract();
   syncWriteFile("../contracts/plonk_vk.sol", sc);
+  syncWriteFile('../contracts/plonk_vk.acir', acir_to_bytes(acir))
 
   console.log('done writing sol verifier');
 }
